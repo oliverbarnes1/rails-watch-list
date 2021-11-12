@@ -1,7 +1,15 @@
+<% if @list.photo.attached? %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @list.photo.key %>)">
+    <h1 class="list-name" style="font-size:60px;" ><strong><%= @list.name %></strong></h1>
+  </div>
+<% else %>
+ <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    <h1 class="list-name" style="font-size:60px;" ><strong><%= @list.name %></strong></h1>
+  </div>
+<% end %>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <h1 class="list-name" style="font-size:60px;" ><strong><%= @list.name %></strong></h1>
-    </div>
+
+
 <div class="d-flex justify-content-between">
   <p class="btn btn-primary btn-lg" ><%= link_to "back", lists_path %></p>
   <p class="btn btn-primary btn-lg"><%= link_to "Add a bookmark", new_list_bookmark_path(@list) %></p>
