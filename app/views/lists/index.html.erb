@@ -1,7 +1,10 @@
-
-
+<h1><strong>Welcome to the Worlds best movie watchlist app</strong></h1>
+<h2>Pick a List:</h2>
+<div class="cards">
   <% @lists.each do |list| %>
-    <p><%= link_to list.name, list_path(list) %></p>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <p class="list-name"><%= link_to list.name, list_path(list) %></p>
+    </div>
   <% end %>
-
-  <h3><%= link_to "Create a list", new_list_path %></h3>
+</div>
+  <h3 class="btn btn-primary btn-lg"><%= link_to "Create a List", new_list_path %></h3>
