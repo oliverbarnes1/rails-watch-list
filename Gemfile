@@ -8,6 +8,9 @@ gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.12.0"
 gem "simple_form"
 
+gem 'cloudinary', '~> 1.16.0'
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
 # Use postgresql as the database for Active Record
